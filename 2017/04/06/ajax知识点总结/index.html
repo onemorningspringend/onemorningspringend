@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>ajax知识点总结 | 一个颜值堪比梁朝伟的男人的博客！ | null</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="1.ajax是一种能够在不重新加载整个网页的情况下，能够更新部分网页的技术，是一种创建快速动态网页的技术，通过在后台与服务器进行少量的数据交换，是网页实现异步更新。2.xmlhttprequest是ajax的基础创建xmlhttprequest对象的语法：variable=new XMLHttpRequest();老版本ie浏览器使用activeX创建：variable=new ActiveXOb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax知识点总结">
+<meta property="og:url" content="http://yoursite.com/2017/04/06/ajax知识点总结/index.html">
+<meta property="og:site_name" content="一个颜值堪比梁朝伟的男人的博客！">
+<meta property="og:description" content="1.ajax是一种能够在不重新加载整个网页的情况下，能够更新部分网页的技术，是一种创建快速动态网页的技术，通过在后台与服务器进行少量的数据交换，是网页实现异步更新。2.xmlhttprequest是ajax的基础创建xmlhttprequest对象的语法：variable=new XMLHttpRequest();老版本ie浏览器使用activeX创建：variable=new ActiveXOb">
+<meta property="og:updated_time" content="2017-04-06T14:10:32.128Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax知识点总结">
+<meta name="twitter:description" content="1.ajax是一种能够在不重新加载整个网页的情况下，能够更新部分网页的技术，是一种创建快速动态网页的技术，通过在后台与服务器进行少量的数据交换，是网页实现异步更新。2.xmlhttprequest是ajax的基础创建xmlhttprequest对象的语法：variable=new XMLHttpRequest();老版本ie浏览器使用activeX创建：variable=new ActiveXOb">
+    
+        <link rel="alternative" href="/atom.xml" title="一个颜值堪比梁朝伟的男人的博客！" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">魏振</h5>
+          <a href="mailto:1023453278@qq.com" title="1023453278@qq.com" class="mail">1023453278@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/onemorningspringend" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/我爱穿拖拉板" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ajax知识点总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">ajax知识点总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-06T14:06:06.000Z" itemprop="datePublished" class="page-time">
+  2017-04-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-ajax知识点总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">ajax知识点总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月06日 22:06" datetime="2017-04-06T14:06:06.000Z"  itemprop="datePublished">2017-04-06</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>1.ajax是一种能够在不重新加载整个网页的情况下，能够更新部分网页的技术，是一种创建快速动态网页的技术，通过在后台与服务器进行少量的数据交换，是网页实现异步更新。<br>2.xmlhttprequest是ajax的基础<br>创建xmlhttprequest对象的语法：<br>variable=new XMLHttpRequest();<br>老版本ie浏览器使用activeX创建：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);<br>为了兼容所有的浏览器所以我们创建时要这么写：<br>var xmlhttp;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>3.向服务器发送请求的语法：<br>如需将请求发送服务器我们使用xmlhttprequest对象的open（）和send（）方法：<br>xmlhttp.open(“get”,”test1.txt”,”true”);<br>xmlhttp.send();<br>open(method,url,async)   method:请求的类型：get或post<br>url：文件在服务器上的位置<br>       async：true异步，false同步<br>send（string）将请求发送到服务器上<br>string：仅用于post请求<br>setrequestheader （header，value）   想请求添加http头<br>       header：规定头的名称<br>       value：规定头的值<br>xmlhttp.open(“POST”,”ajax_test.asp”,true);<br>xmlhttp.setRequestHeader(“Content-type”,”application/x-www-form-urlencoded”);<br>xmlhttp.send(“fname=Bill&amp;lname=Gates”);<br>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用 POST 请求：<br>无法使用缓存文件（更新服务器上的文件或数据库）<br>向服务器发送大量数据（POST 没有数据量限制）<br>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠<br>4.服务器响应语法：<br>responseText   获得字符串形式的响应数据<br>document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>responseXML   获得XML形式的响应数据，如果是XML形式的数据，需要先对XML进行解析<br>xmlDoc=xmlhttp.responseXML;<br>txt=””;<br>x=xmlDoc.getElementsByTagName(“ARTIST”);<br>for (i=0;i&lt;x.length;i++)<br>  {<br>  txt=txt + x[i].childNodes[0].nodeValue + “<br>“;<br>  }<br>document.getElementById(“myDiv”).innerHTML=txt;<br>5.onreadystatechange事件<br>存储函数，每当readystate属性发生改变时，都会调用该函数<br>readystate 存有xmlhttprequest的状态<br>0：请求未初始化<br>1：服务器连接已建立<br>2：请求已接收<br>3：请求处理中<br>4：请求已完成且响应已就绪<br>status<br>200：“OK”<br>404：未找到网页<br>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。<br>当 readyState 等于 4 且状态为 200 时，表示响应已就绪：<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>6.callback函数<br>callback 函数是一种以参数形式传递给另一个函数的函数。<br>如果网站上存在多个 AJAX 任务，应该为创建 XMLHttpRequest 对象编写一个标准的函数，并为每个 AJAX 任务调用该函数。</p>
+<p>该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）：<br> function myFunction(){<br>loadXMLDoc(“ajax_info.txt”,function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  });<br>}<br>7.实例;showHint()函数<br>当用户在输入框输入会执行该函数，并且该函数由“onekeyup”触发<br>function showHint(str)<br>{<br>var xmlhttp;<br>if (str.length==0)<br>  {<br>  document.getElementById(“txtHint”).innerHTML=””;<br>  return;<br>  }<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“txtHint”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>xmlhttp.open(“GET”,”gethint.asp?q=”+str,true);<br>xmlhttp.send();<br>}<br>当用户chool 提供的内容仅用于<br>相对应的gethint.asp文件<br>&lt;%<br>response.expires=-1<br>dim a(30)’用名字来填充数组<br>a(1)=”Anna”<br>a(2)=”Brittany”<br>a(3)=”Cinderella”<br>a(4)=”Diana”<br>a(5)=”Eva”<br>a(6)=”Fiona”<br>a(7)=”Gunda”<br>a(8)=”Hege”<br>a(9)=”Inga”<br>a(10)=”Johanna”<br>a(11)=”Kitty”<br>a(12)=”Linda”<br>a(13)=”Nina”<br>a(14)=”Ophelia”<br>a(15)=”Petunia”<br>a(16)=”Amanda”<br>a(17)=”Raquel”<br>a(18)=”Cindy”<br>a(19)=”Doris”<br>a(20)=”Eve”<br>a(21)=”Evita”<br>a(22)=”Sunniva”<br>a(23)=”Tove”<br>a(24)=”Unni”<br>a(25)=”Violet”<br>a(26)=”Liza”<br>a(27)=”Elizabeth”<br>a(28)=”Ellen”<br>a(29)=”Wenche”<br>a(30)=”Vicky”<br>‘获得来自 URL 的 q 参数<br>q=ucase(request.querystring(“q”))<br>‘如果 q 大于 0，则查找数组中的所有提示<br>if len(q)&gt;0 then<br>  hint=””<br>  for i=1 to 30<br>    if q=ucase(mid(a(i),1,len(q))) then<br>      if hint=”” then<br>        hint=a(i)<br>      else<br>        hint=hint &amp; “ , “ &amp; a(i)<br>      end if<br>    end if<br>  next<br>end if<br>‘如果未找到提示，则输出 “no suggestion”‘否则输出正确的值<br>if hint=”” then<br>  response.write(“no suggestion”)<br>else<br>  response.write(hint)<br>end if<br>%&gt;<br>8.AJAX与XML交互通信<br>LoadXMLDoc() 函数创建 XMLHttpRequest 对象，添加当服务器响应就绪时执行的函数，并将请求发送到服务器。<br>当服务器响应就绪时，会构建一个 HTML 表格，从 XML 文件中提取节点（元素），最后使用已经填充了 XML 数据的 HTML 表格来更新 txtCDInfo 占位符：<br>function loadXMLDoc(url)<br>{<br>var xmlhttp;<br>var txt,xx,x,i;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    txt=”<table border="1"><tr><th>Title</th><th>Artist</th></tr>“;<br>    x=xmlhttp.responseXML.documentElement.getElementsByTagName(“CD”);<br>    for (i=0;i&lt;x.length;i++)<br>      {<br>      txt=txt + “<tr>“;<br>      xx=x[i].getElementsByTagName(“TITLE”);<br>        {<br>        try<br>          {<br>          txt=txt + “<td>“ + xx[0].firstChild.nodeValue + “</td>“;<br>          }<br>        catch (er)<br>          {<br>          txt=txt + “<td> </td>“;<br>          }<br>        }<br>    xx=x[i].getElementsByTagName(“ARTIST”);<br>      {<br>        try<br>          {<br>          txt=txt + “<td>“ + xx[0].firstChild.nodeValue + “</td>“;<br>          }<br>        catch (er)<br>          {<br>          txt=txt + “<td> </td>“;<br>          }<br>        }<br>      txt=txt + “</tr>“;<br>      }<br>    txt=txt + “</table>“;<br>    document.getElementById(‘txtCDInfo’).innerHTML=txt;<br>    }<br>  }<br>xmlhttp.open(“GET”,url,true);<br>xmlhttp.send();<br>}</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-06T14:10:32.128Z" itemprop="dateUpdated">2017年4月6日 22:10</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/04/06/ajax知识点总结/" target="_blank" rel="external">http://yoursite.com/2017/04/06/ajax知识点总结/</a>
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="魏振">
+            魏振
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/06/ajax知识点总结/&title=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/06/ajax知识点总结/&title=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/06/ajax知识点总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&url=http://yoursite.com/2017/04/06/ajax知识点总结/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/06/ajax知识点总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/06/Markdown语法总结/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Markdown语法总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/06/html5总结/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">html5总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="ajax知识点总结" data-title="ajax知识点总结" data-url="http://yoursite.com/2017/04/06/ajax知识点总结/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>一个颜值堪比梁朝伟的男人的博客！ &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/06/ajax知识点总结/&title=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/06/ajax知识点总结/&title=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/06/ajax知识点总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ajax知识点总结》 — 一个颜值堪比梁朝伟的男人的博客！&url=http://yoursite.com/2017/04/06/ajax知识点总结/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/06/ajax知识点总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/06/ajax知识点总结/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
