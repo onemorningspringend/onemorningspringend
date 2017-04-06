@@ -1,302 +1,464 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>一个颜值堪比梁朝伟的男人的博客！</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>一个颜值堪比梁朝伟的男人的博客！ | null</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="undefined">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="一个颜值堪比梁朝伟的男人的博客！">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="一个颜值堪比梁朝伟的男人的博客！">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个颜值堪比梁朝伟的男人的博客！">
-  
-    <link rel="alternate" href="/atom.xml" title="一个颜值堪比梁朝伟的男人的博客！" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
+    
+        <link rel="alternative" href="/atom.xml" title="一个颜值堪比梁朝伟的男人的博客！" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">一个颜值堪比梁朝伟的男人的博客！</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">魏振</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-ajax知识点" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/02/ajax知识点/" class="article-date">
-  <time datetime="2017-04-02T01:10:41.000Z" itemprop="datePublished">2017-04-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/02/ajax知识点/">ajax知识点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>户输入时，POST 比 GET 更稳定也更可靠<br>4.服务器响应语法：<br>responseText   获得字符串形式的响应数据<br>document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>responseXML   获得XML形式的响应数据，如果是XML形式的数据，需要先对XML进行解析<br>xmlDoc=xmlhttp.responseXML;<br>txt=””;<br>x=xmlDoc.getElementsByTagName(“ARTIST”);<br>for (i=0;i&lt;x.length;i++)<br>  {<br>  txt=txt + x[i].childNodes[0].nodeValue + “<br>“;<br>  }<br>document.getElementById(“myDiv”).innerHTML=txt;<br>5.onreadystatechange事件<br>存储函数，每当readystate属性发生改变时，都会调用该函数<br>readystate 存有xmlhttprequest的状态<br>0：请求未初始化<br>1：服务器连接已建立<br>2：请求已接收<br>3：请求处理中<br>4：请求已完成且响应已就绪<br>status<br>200：“OK”<br>404：未找到网页<br>在 onreadystatechange 事件中，我们规定当服务器响应已做好被处理的准备时所执行的任务。<br>当 readyState 等于 4 且状态为 200 时，表示响应已就绪：<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>6.callback函数<br>callback 函数是一种以参数形式传递给另一个函数的函数。<br>如果网站上存在多个 AJAX 任务，应该为创建 XMLHttpRequest 对象编写一个标准的函数，并为每个 AJAX 任务调用该函数。<br>该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）：<br> function myFunction(){<br>loadXMLDoc(“ajax_info.txt”,function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;<br>    }<br>  });<br>}<br>7.实例;showHint()函数<br>当用户在输入框输入会执行该函数，并且该函数由“onekeyup”触发<br>function showHint(str)<br>{<br>var xmlhttp;<br>if (str.length==0)<br>  {<br>  document.getElementById(“txtHint”).innerHTML=””;<br>  return;<br>  }<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    document.getElementById(“txtHint”).innerHTML=xmlhttp.responseText;<br>    }<br>  }<br>xmlhttp.open(“GET”,”gethint.asp?q=”+str,true);<br>xmlhttp.send();<br>}<br>当用户chool 提供的内容仅用于<br>相对应的gethint.asp文件<br>&lt;%<br>response.expires=-1<br>dim a(30)’用名字来填充数组<br>a(1)=”Anna”<br>a(2)=”Brittany”<br>a(3)=”Cinderella”<br>a(4)=”Diana”<br>a(5)=”Eva”<br>a(6)=”Fiona”<br>a(7)=”Gunda”<br>a(8)=”Hege”<br>a(9)=”Inga”<br>a(10)=”Johanna”<br>a(11)=”Kitty”<br>a(12)=”Linda”<br>a(13)=”Nina”<br>a(14)=”Ophelia”<br>a(15)=”Petunia”<br>a(16)=”Amanda”<br>a(17)=”Raquel”<br>a(18)=”Cindy”<br>a(19)=”Doris”<br>a(20)=”Eve”<br>a(21)=”Evita”<br>a(22)=”Sunniva”<br>a(23)=”Tove”<br>a(24)=”Unni”<br>a(25)=”Violet”<br>a(26)=”Liza”<br>a(27)=”Elizabeth”<br>a(28)=”Ellen”<br>a(29)=”Wenche”<br>a(30)=”Vicky”<br>‘获得来自 URL 的 q 参数<br>q=ucase(request.querystring(“q”))<br>‘如果 q 大于 0，则查找数组中的所有提示<br>if len(q)&gt;0 then<br>  hint=””<br>  for i=1 to 30<br>    if q=ucase(mid(a(i),1,len(q))) then<br>      if hint=”” then<br>        hint=a(i)<br>      else<br>        hint=hint &amp; “ , “ &amp; a(i)<br>      end if<br>    end if<br>  next<br>end if<br>‘如果未找到提示，则输出 “no suggestion”‘否则输出正确的值<br>if hint=”” then<br>  response.write(“no suggestion”)<br>else<br>  response.write(hint)<br>end if<br>%&gt;<br>8.AJAX与XML交互通信<br>LoadXMLDoc() 函数创建 XMLHttpRequest 对象，添加当服务器响应就绪时执行的函数，并将请求发送到服务器。<br>当服务器响应就绪时，会构建一个 HTML 表格，从 XML 文件中提取节点（元素），最后使用已经填充了 XML 数据的 HTML 表格来更新 txtCDInfo 占位符：<br>function loadXMLDoc(url)<br>{<br>var xmlhttp;<br>var txt,xx,x,i;<br>if (window.XMLHttpRequest)<br>  {// code for IE7+, Firefox, Chrome, Opera, Safari<br>  xmlhttp=new XMLHttpRequest();<br>  }<br>else<br>  {// code for IE6, IE5<br>  xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>  }<br>xmlhttp.onreadystatechange=function()<br>  {<br>  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)<br>    {<br>    txt=”<table border="1"><tr><th>Title</th><th>Artist</th></tr>“;<br>    x=xmlhttp.responseXML.documentElement.getElementsByTagName(“CD”);<br>    for (i=0;i&lt;x.length;i++)<br>      {<br>      txt=txt + “<tr>“;<br>      xx=x[i].getElementsByTagName(“TITLE”);<br>        {<br>        try<br>          {<br>          txt=txt + “<td>“ + xx[0].firstChild.nodeValue + “</td>“;<br>          }<br>        catch (er)<br>          {<br>          txt=txt + “<td> </td>“;<br>          }<br>        }<br>    xx=x[i].getElementsByTagName(“ARTIST”);<br>      {<br>        try<br>          {<br>          txt=txt + “<td>“ + xx[0].firstChild.nodeValue + “</td>“;<br>          }<br>        catch (er)<br>          {<br>          txt=txt + “<td> </td>“;<br>          }<br>        }<br>      txt=txt + “</tr>“;<br>      }<br>    txt=txt + “</table>“;<br>    document.getElementById(‘txtCDInfo’).innerHTML=txt;<br>    }<br>  }<br>xmlhttp.open(“GET”,url,true);<br>xmlhttp.send();<br>}</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/02/ajax知识点/" data-id="cj0zzs08300007kvgxw5n64kc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-魏振测试文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/31/魏振测试文章/" class="article-date">
-  <time datetime="2017-03-31T14:19:21.000Z" itemprop="datePublished">2017-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/31/魏振测试文章/">前端学习笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CSS3特性总结"><a href="#CSS3特性总结" class="headerlink" title="CSS3特性总结"></a>CSS3特性总结</h1><p>1.边框<br>border-image 用图片来构建边框<br>border-radius 创建圆角矩形边框<br>box-shadow 向方框添加阴影<br>2.背景<br>background-clip 规定背景的绘制区域<br>background-origin 规定背景图片的定位区域<br>background-size 规定背景图片的尺寸<br>3.文本效果<br>text-shadow 向文本添加阴影<br>4.2D转换<br>translate 元素从当前位置移动<br>rotate 元素顺时针旋转<br>scale 元素的尺寸增加或减少<br>skew 元素翻转<br>matrix 把所有的2D转换方式组合到一起<br>5.3D转换<br>rotateX 元素绕X轴旋转<br>rotateY 元素绕Y轴旋转<br>perspective 规定3D元素的透视效果<br>6.过渡<br>transition 简写属性，用于在一个属性中设置四个过渡属性<br>transition-property 规定应用过渡的CSS属性的名称<br>transition-duration 规定过渡效果花费的时间<br>transition-timing-function 规定过渡效果的时间曲线<br>transition-delay 规定过渡效果从什么时间开始<br>7.动画<br>@keyframes 规定动画<br>animation-name 规定动画的名称<br>animation-duration 规定动画完成一个周期所花费的秒或毫秒，默认是0<br>animation-timing-function 规定动画的速度曲线<br>animation-delay 规定动画开始的时间<br>animation-itreation-count 规定动画播放的次数<br>animation-direction 规定动画在下一周期是否逆向的播放<br>animation-play-state 规定动画是否正在运行或暂停<br>animation-fill-mode 规定对象动画时间之外的状态<br>8.多列<br>column-count 规定元素应该被分割的列数<br>column-fill 规定如何填充列<br>column-gap 规定列之间的间隔<br>column-rule-color 规定列之间规则的颜色<br>column-rule-style 规定列之间规则的样式<br>column-rule-width 规定列之间规则的宽度<br>column-span 规定元素应该横跨的列数<br>column-width 规定列的宽度<br>9.用户界面<br>appearance 允许您将元素设置为标准用户界面元素的外观<br>box-sizing 允许您以确切的方式定义适应某个区域的具体内容<br>icon 为创作者提供使用图标化等价物来设置元素样式的能力<br>nav-down 规定在使用arrow-down导航键时向何处导航<br>nav-up 规定在使用arrow-up导航键时向何处导航<br>nav-index 设置元素的tab键控制次序<br>nav-left 规定使用arrow-left导航键时向何处导航<br>nav-right 规定使用arrow-right导航键时向何处导航<br>outline-offset 对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓<br>resize 规定是否可由用户对尺寸进行调整</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/31/魏振测试文章/" data-id="cj0zzs08p00037kvgfn8yhd98" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-魏振测试" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/31/魏振测试/" class="article-date">
-  <time datetime="2017-03-30T16:15:02.000Z" itemprop="datePublished">2017-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/31/魏振测试/">魏振测试</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
         
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/31/魏振测试/" data-id="cj0zzs08n00027kvg3dha291s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/30/hello-world/" class="article-date">
-  <time datetime="2017-03-30T15:22:04.702Z" itemprop="datePublished">2017-03-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/30/hello-world/" data-id="cj0zzs08l00017kvg3tvbnje7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
         
-          <li>
-            <a href="/2017/04/02/ajax知识点/">ajax知识点</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/31/魏振测试文章/">前端学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/31/魏振测试/">魏振测试</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/30/hello-world/">Hello World</a>
-          </li>
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
         
       </ul>
     </div>
   </div>
-
-  
 </aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">一个颜值堪比梁朝伟的男人的博客！</div>
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 魏振<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
-  </div>
-</footer>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">一个颜值堪比梁朝伟的男人的博客！</h1>
+        <h5 class="subtitle">
+            
+                
+            
+        </h5>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-ajax知识点"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017年04月02日 9:10" datetime="2017-04-02T01:10:41.000Z"  itemprop="datePublished">2017-04-02</time>
+
+        
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+        
+
+    </div>
+
+    
 
 
-<script src="/js/script.js"></script>
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/04/02/ajax知识点/">ajax知识点</a>
+    </h3>
+  
 
-  </div>
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        户输入时，POST 比 GET 更稳定也更可靠4.服务器响应语法：responseText   获得字符串形式的响应数据document.getElementById(“myDiv”).innerHTML=xmlhttp.responseText;responseXML   获得XML形式的响应数据，如果是XML形式的数据，需要先对XML进行解析xmlDoc=xmlhttp.response...
+    
+
+        <a href="/2017/04/02/ajax知识点/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-魏振测试文章"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017年03月31日 22:19" datetime="2017-03-31T14:19:21.000Z"  itemprop="datePublished">2017-03-31</time>
+
+        
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/03/31/魏振测试文章/">前端学习笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        CSS3特性总结1.边框border-image 用图片来构建边框border-radius 创建圆角矩形边框box-shadow 向方框添加阴影2.背景background-clip 规定背景的绘制区域background-origin 规定背景图片的定位区域background-size 规定背景图片的尺寸3.文本效果text-shadow 向文本添加阴影4.2D转换translate ...
+    
+
+        <a href="/2017/03/31/魏振测试文章/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-魏振测试"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017年03月31日 0:15" datetime="2017-03-30T16:15:02.000Z"  itemprop="datePublished">2017-03-31</time>
+
+        
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/03/31/魏振测试/">魏振测试</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        
+    
+
+        <a href="/2017/03/31/魏振测试/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-hello-world"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2017年03月30日 23:22" datetime="2017-03-30T15:22:04.702Z"  itemprop="datePublished">2017-03-30</time>
+
+        
+
+
+        
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2017/03/30/hello-world/">Hello World</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu...
+    
+
+        <a href="/2017/03/30/hello-world/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>一个颜值堪比梁朝伟的男人的博客！ &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/&title=一个颜值堪比梁朝伟的男人的博客！&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/&title=一个颜值堪比梁朝伟的男人的博客！&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=一个颜值堪比梁朝伟的男人的博客！&url=http://yoursite.com/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
 </body>
 </html>
