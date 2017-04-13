@@ -44,7 +44,7 @@ webkit内核的浏览器，必须加上-webkit">
     display:inline-flex;
 }
 webkit内核的浏览器，必须加上-webkit">
-<meta property="og:updated_time" content="2017-04-13T14:02:13.630Z">
+<meta property="og:updated_time" content="2017-04-13T14:07:07.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FLEX">
 <meta name="twitter:description" content="CSS弹性布局1. 什么是弹性布局通俗的讲，当一个页面当进行缩放的时候（ctrl+鼠标滚轮），其中的内容是否会随着变化？如果随着变化，那就是弹性设计。
@@ -272,48 +272,34 @@ webkit内核的浏览器，必须加上-webkit">
 </ul>
 </li>
 </ol>
-<h3 id="4-项目的属性"><a href="#4-项目的属性" class="headerlink" title="4. 项目的属性"></a>4. 项目的属性</h3><ol>
-<li><p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0</p>
+<h3 id="4-项目的属性"><a href="#4-项目的属性" class="headerlink" title="4. 项目的属性"></a>4. 项目的属性</h3><p>1.order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0</p>
 <pre><code>.item{
     order:&lt;integer&gt;;
 }
-</code></pre></li>
-<li><p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大</p>
+</code></pre><p>2.flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大</p>
 <pre><code>.item{
     flex-grow:&lt;number&gt;;
 }
-</code></pre></li>
-</ol>
-<p>如果所有项目的flex-grow的属性都为1，则他们将等分剩余空间。如果一个项目的属性为2，其余都为1，则前者占据的剩余空间将比其他项多一倍。</p>
-<ol>
-<li><p>flex-shrink属性定义了项目的缩小比例，默认为0，即如果空间不足，该项目将缩小</p>
+</code></pre><p>如果所有项目的flex-grow的属性都为1，则他们将等分剩余空间。如果一个项目的属性为2，其余都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<p>3.flex-shrink属性定义了项目的缩小比例，默认为0，即如果空间不足，该项目将缩小</p>
 <pre><code>.item{
     flex-shrink:&lt;number&gt;;
 }
-</code></pre></li>
-</ol>
-<p>如果所有项目的属性值都为1，当空间不足时将等比例缩小。如果一个为0，其他的为1，则空间不足时，前者不缩小。</p>
-<ol>
-<li><p>flex-basic属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。默认值为auto，即项目本来的大小。</p>
+</code></pre><p>如果所有项目的属性值都为1，当空间不足时将等比例缩小。如果一个为0，其他的为1，则空间不足时，前者不缩小。</p>
+<p>4.flex-basic属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。默认值为auto，即项目本来的大小。</p>
 <pre><code>.item{
     flex-basic:&lt;length&gt;|auto;
 }
-</code></pre></li>
-<li><p>flex属性是2、3、4的简写，默认值为0,1，auto。后两个属性可选</p>
+</code></pre><p>5.flex属性是2、3、4的简写，默认值为0,1，auto。后两个属性可选</p>
 <pre><code>.item{
     flex:none|[&lt;&apos;flex-grow&apos;&gt;&lt;&apos;flex-shrink&apos;&gt;?||&lt;&apos;flex-basic&apos;&gt;]
 }
-</code></pre></li>
-</ol>
-<p>改属性有两个快捷值：auto（1,1，auto）和none（0,0，auto）<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
-<ol>
-<li><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素则等同于stretch。</p>
+</code></pre><p>改属性有两个快捷值：auto（1,1，auto）和none（0,0，auto）<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<p>6.align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素则等同于stretch。</p>
 <pre><code>.item{
     align-self:auto|flex-start|flex-end|center|baseline|stretch
 }
-</code></pre></li>
-</ol>
-<h3 id="5-声明"><a href="#5-声明" class="headerlink" title="5. 声明"></a>5. 声明</h3><p>本博客仅是自己学习使用，在学习的过程中借鉴了阮一峰老师的博客，在这里谢谢阮一峰老师。</p>
+</code></pre><h3 id="5-声明"><a href="#5-声明" class="headerlink" title="5. 声明"></a>5. 声明</h3><p>本博客仅是自己学习使用，在学习的过程中借鉴了阮一峰老师的博客，在这里谢谢阮一峰老师。</p>
 
         </div>
 
@@ -321,7 +307,7 @@ webkit内核的浏览器，必须加上-webkit">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-04-13T14:02:13.630Z" itemprop="dateUpdated">2017年4月13日 22:02</time>
+    最后更新时间：<time datetime="2017-04-13T14:07:07.085Z" itemprop="dateUpdated">2017年4月13日 22:07</time>
 </span><br>
 
 
